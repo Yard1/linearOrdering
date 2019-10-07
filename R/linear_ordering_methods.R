@@ -93,8 +93,8 @@ hellwig <- function(decision, weights, impacts) {
     matrix <- normalize_impacts(decision, impacts)
     matrix <- scale(matrix)
     matrix <- matrix %*% diag(weights)
-    matrix_max <- apply(matrix[, ], 2, max)
-    matrix_distance <- apply(matrix[, ], 1, calculate_distance, matrix_max)
+    matrix_max <- apply(matrix, 2, max)
+    matrix_distance <- apply(matrix, 1, calculate_distance, matrix_max)
     reasonable_distance <- mean(matrix_distance) + 2 * sd(matrix_distance)
     score <- as.vector(1 - matrix_distance / reasonable_distance)
 
