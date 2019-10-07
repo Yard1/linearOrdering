@@ -15,7 +15,7 @@ Use devtools to install linearOrdering.
 
 ```r
 install.packages("devtools")
-devtools::install_github("username/packagename")
+devtools::install_github("Yard1/linearOrdering")
 ```
 
 ## Usage
