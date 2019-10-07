@@ -26,7 +26,7 @@
 sum_of_ranks <- function(decision, weights, impacts) {
     if (length(weights) != ncol(decision))
         stop("length of 'weights' is not equal to number of columns")
-    matrix <- normalize_impacts(decision, impacts)
+    matrix <- .normalize_impacts(decision, impacts)
     matrix <- apply(matrix, 2, rank)
     score <- as.vector(apply(matrix, 1, weighted.mean, weights))
     df <- data.frame(alt.row = 1:length(vector), score = score, rank = rank(-score), row.names = rownames(decision))
@@ -56,7 +56,7 @@ sum_of_ranks <- function(decision, weights, impacts) {
 standarized_sums <- function(decision, weights, impacts) {
     if (length(weights) != ncol(decision))
         stop("length of 'weights' is not equal to number of columns")
-    matrix <- normalize_impacts(decision, impacts)
+    matrix <- .normalize_impacts(decision, impacts)
     matrix <- scale(matrix)
     matrix <- matrix %*% diag(weights)
     matrix <- apply(matrix, 1, mean)
@@ -90,11 +90,11 @@ standarized_sums <- function(decision, weights, impacts) {
 hellwig <- function(decision, weights, impacts) {
     if (length(weights) != ncol(decision))
         stop("length of 'weights' is not equal to number of columns")
-    matrix <- normalize_impacts(decision, impacts)
+    matrix <- .normalize_impacts(decision, impacts)
     matrix <- scale(matrix)
     matrix <- matrix %*% diag(weights)
     matrix_max <- apply(matrix, 2, max)
-    matrix_distance <- apply(matrix, 1, calculate_distance, matrix_max)
+    matrix_distance <- apply(matrix, 1, .calculate_distance, matrix_max)
     reasonable_distance <- mean(matrix_distance) + 2 * sd(matrix_distance)
     score <- as.vector(1 - matrix_distance / reasonable_distance)
 
@@ -126,12 +126,12 @@ hellwig <- function(decision, weights, impacts) {
 topsis <- function(decision, weights, impacts) {
     if (length(weights) != ncol(decision))
         stop("length of 'weights' is not equal to number of columns")
-    matrix <- normalize_impacts(decision, impacts)
-    matrix <- sapply(matrix, topsis_normalize, weights)
+    matrix <- .normalize_impacts(decision, impacts)
+    matrix <- sapply(matrix, .topsis_normalize, weights)
     matrix_max <- apply(matrix, 2, max)
     matrix_min <- apply(matrix, 2, min)
-    matrix_max_distance <- apply(matrix, 1, calculate_distance, matrix_max)
-    matrix_min_distance <- apply(matrix, 1, calculate_distance, matrix_min)
+    matrix_max_distance <- apply(matrix, 1, .calculate_distance, matrix_max)
+    matrix_min_distance <- apply(matrix, 1, .calculate_distance, matrix_min)
     score <- as.vector(matrix_min_distance / (matrix_min_distance + matrix_max_distance))
 
     df <- data.frame(alt.row = 1:length(vector), score = score, rank = rank(-score), row.names = rownames(decision))

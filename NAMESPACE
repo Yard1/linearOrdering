@@ -1,2 +1,2 @@
-exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
 importFrom("stats", "sd", "weighted.mean")

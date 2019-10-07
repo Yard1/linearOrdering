@@ -12,8 +12,8 @@
 # @examples
 # d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
 # i <- c('+', '-', '+')
-# normalize_impacts(d, i)
-normalize_impacts <- function(decision, impacts) {
+# .normalize_impacts(d, i)
+.normalize_impacts <- function(decision, impacts) {
     if (length(impacts) != ncol(decision))
         warning("length of 'impacts' is not equal to number of columns, treating every next column as positively influencing")
     decision[, impacts == "-"] <- -decision[, impacts == "-"]
@@ -28,8 +28,8 @@ normalize_impacts <- function(decision, impacts) {
 # @examples
 # x <- c(2, 5)
 # y <- c(5, 7)
-# calculate_distance(x, y)
-calculate_distance <- function(x, y) {
+# .calculate_distance(x, y)
+.calculate_distance <- function(x, y) {
     sqrt(sum((x - y)^2))
 }
 
@@ -47,7 +47,7 @@ calculate_distance <- function(x, y) {
 # @examples
 # d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
 # w <- c(1, 1, 2)
-# d <- sapply(d, topsis_normalize, w)
-topsis_normalize <- function(decision, weights) {
+# d <- sapply(d, .topsis_normalize, w)
+.topsis_normalize <- function(decision, weights) {
     weights * decision / sqrt(sum(decision^2))
 }
