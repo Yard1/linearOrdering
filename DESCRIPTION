@@ -1,6 +1,6 @@
 Package: linearOrdering
 Type: Package
-Title: Methods of linear ordering of data
+Title: Methods of Linear Ordering of Data
 Version: 1.0.0
 Authors@R: person("Antoni", "Baum", email = "antoni.baum@protonmail.com",
   role = c("aut", "cre"))
