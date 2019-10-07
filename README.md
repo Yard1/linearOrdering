@@ -1,5 +1,5 @@
 # linearOrdering
-[![Travis (.org)](https://img.shields.io/travis/yard1/linearOrdering)](https://travis-ci.org/Yard1/linearOrdering)
+[![Build Status](https://travis-ci.org/Yard1/linearOrdering.svg?branch=master)](https://travis-ci.org/Yard1/linearOrdering)
 
 linearOrdering is an R package providing several methods for linear ordering of numerical data.
 
