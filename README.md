@@ -5,7 +5,7 @@ linearOrdering is an R package providing several methods for linear ordering of 
 
 Currently included methods:
 * Sum of ranks
-* Standarized sums
+* Standardized sums
 * Hellwig's (Hellwig, 1968)
 * TOPSIS (Hwang & Yoon, 1981).
 

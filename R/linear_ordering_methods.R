@@ -33,7 +33,7 @@ sum_of_ranks <- function(decision, weights, impacts) {
     return(df)
 }
 
-#' Standarized sums method.
+#' Standardized sums method.
 #'
 #' @inheritParams sum_of_ranks
 #' @return A data frame including elements:
@@ -51,9 +51,9 @@ sum_of_ranks <- function(decision, weights, impacts) {
 #' d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
 #' w <- c(1, 1, 2)
 #' i <- c('+', '-', '+')
-#' standarized_sums(d, w, i)
+#' standardized_sums(d, w, i)
 #' @export
-standarized_sums <- function(decision, weights, impacts) {
+standardized_sums <- function(decision, weights, impacts) {
     if (length(weights) != ncol(decision))
         stop("length of 'weights' is not equal to number of columns")
     matrix <- .normalize_impacts(decision, impacts)

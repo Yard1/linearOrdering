@@ -1,3 +1,8 @@
+## Resubmission
+This is a resubmission. In this version I have:
+* Fixed the LICENSE file to conform to CRAN requirements.
+* Fixed a typo in the name of the `standarized_sums` function (and updated DESCRIPTION/README).
+
 ## Test environments
 * Linux Mint 18.3 Sylvia local install, R 3.6.1
 * Ubuntu 16.04 (on travis-ci), R 3.6.1

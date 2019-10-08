@@ -7,7 +7,7 @@ Authors@R: person("Antoni", "Baum", email = "antoni.baum@protonmail.com",
 Description: Provides various methods of linear ordering of data. Supports weights and positive/negative impacts.
     Currently included methods:
     * Sum of ranks
-    * Standarized sums
+    * Standardized sums
     * Hellwig's (Hellwig, 1968)
     * TOPSIS (Hwang & Yoon, 1981).
 URL: https://github.com/Yard1/linearOrdering

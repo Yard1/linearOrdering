@@ -4,3 +4,4 @@
 \.git
 .Rprofile
 cran-comments.md
+^CRAN-RELEASE$
