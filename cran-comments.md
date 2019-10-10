@@ -1,5 +1,9 @@
 ## Resubmission
 This is a resubmission. In this version I have:
+* Added an URL and an ISBN number to references in DESCRIPTION.
+* Standardized the reference format in documentation.
+
+### Previous resubmission:
 * Fixed the LICENSE file to conform to CRAN requirements.
 * Fixed a typo in the name of the `standarized_sums` function (and updated DESCRIPTION/README).
 

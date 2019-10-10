@@ -26,8 +26,8 @@ Documentation included in the package itself.
 Antoni Baum
 
 ## References
-* Hellwig, Z. (1968). On the optimal choice of predictors. In: Gostkowski, Z. (ed.) Toward a System of Quantitative Indicators of Components of Human Resources Development, Study VI. Paris: UNESCO.
-* Hwang, C.L.; Yoon, K. (1981). Multiple Attribute Decision Making: Methods and Applications. New York: Springer-Verlag.
+* [Hellwig, Z. (1968). On the optimal choice of predictors. UNESCO.](https://unesdoc.unesco.org/ark:/48223/pf0000158559.locale=en)
+* Yoon, K. P., & Hwang, C. L. (1981). Multiple Attribute Decision Making: Methods and Applications. New York: Springer-Verlag. ISBN: 978-3-642-48318-9
 
 ## License
-[MIT](https://github.com/Yard1/linearOrdering/blob/master/LICENSE)
+[MIT](https://github.com/Yard1/linearOrdering/blob/master/LICENSE.md)

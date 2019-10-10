@@ -78,9 +78,7 @@ standardized_sums <- function(decision, weights, impacts) {
 #' Should \code{decision} be a data frame, the row names will be carried over
 #' to the return value.
 #' @author Antoni Baum \email{antoni.baum@protonmail.com}
-#' @references Hellwig, Z. (1968). On the optimal choice of predictors.
-#' In: Gostkowski, Z. (ed.) Toward a System of Quantitative Indicators of
-#' Components of Human Resources Development, Study VI. Paris: UNESCO.
+#' @references \href{https://unesdoc.unesco.org/ark:/48223/pf0000158559.locale=en}{Hellwig, Z. (1968). On the optimal choice of predictors. UNESCO.}
 #' @examples
 #' d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
 #' w <- c(1, 1, 2)
@@ -115,8 +113,9 @@ hellwig <- function(decision, weights, impacts) {
 #' Should \code{decision} be a data frame, the row names will be carried over
 #' to the return value.
 #' @author Antoni Baum \email{antoni.baum@protonmail.com}
-#' @references Hwang, C.L.; Yoon, K. (1981). Multiple Attribute Decision
-#' Making: Methods and Applications. New York: Springer-Verlag.
+#' @references Yoon, K. P., & Hwang, C. L. (1981).
+#' Multiple Attribute Decision Making: Methods and Applications.
+#' New York: Springer-Verlag. ISBN: 978-3-642-48318-9
 #' @examples
 #' d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
 #' w <- c(1, 1, 2)

@@ -38,8 +38,9 @@ i <- c('+', '-', '+')
 topsis(d, w, i)
 }
 \references{
-Hwang, C.L.; Yoon, K. (1981). Multiple Attribute Decision
-Making: Methods and Applications. New York: Springer-Verlag.
+Yoon, K. P., & Hwang, C. L. (1981).
+Multiple Attribute Decision Making: Methods and Applications.
+New York: Springer-Verlag. ISBN: 978-3-642-48318-9
 }
 \author{
 Antoni Baum \email{antoni.baum@protonmail.com}

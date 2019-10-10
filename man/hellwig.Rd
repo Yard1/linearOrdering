@@ -36,9 +36,7 @@ i <- c('+', '-', '+')
 hellwig(d, w, i)
 }
 \references{
-Hellwig, Z. (1968). On the optimal choice of predictors.
-In: Gostkowski, Z. (ed.) Toward a System of Quantitative Indicators of
-Components of Human Resources Development, Study VI. Paris: UNESCO.
+\href{https://unesdoc.unesco.org/ark:/48223/pf0000158559.locale=en}{Hellwig, Z. (1968). On the optimal choice of predictors. UNESCO.}
 }
 \author{
 Antoni Baum \email{antoni.baum@protonmail.com}

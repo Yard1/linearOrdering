@@ -8,8 +8,8 @@ Description: Provides various methods of linear ordering of data. Supports weigh
     Currently included methods:
     * Sum of ranks
     * Standardized sums
-    * Hellwig's (Hellwig, 1968)
-    * TOPSIS (Hwang & Yoon, 1981).
+    * Hellwig's (Hellwig, 1968, <https://unesdoc.unesco.org/ark:/48223/pf0000158559.locale=en>)
+    * TOPSIS (Yoon & Hwang, 1981, ISBN:978-3-642-48318-9).
 URL: https://github.com/Yard1/linearOrdering
 BugReports: https://github.com/Yard1/linearOrdering/issues
 License: MIT + file LICENSE
