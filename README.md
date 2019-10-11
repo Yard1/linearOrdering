@@ -11,7 +11,11 @@ Currently included methods:
 
 ## Installation
 
-Use devtools to install linearOrdering.
+Use install.packages() (for the release version) or devtools (for the development version) to install linearOrdering.
+
+```r
+install.packages("linearOrdering")
+```
 
 ```r
 install.packages("devtools")

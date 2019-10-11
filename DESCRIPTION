@@ -1,7 +1,7 @@
 Package: linearOrdering
 Type: Package
 Title: Methods of Linear Ordering of Data
-Version: 1.0.0
+Version: 1.0.0.9000
 Authors@R: person("Antoni", "Baum", email = "antoni.baum@protonmail.com",
   role = c("aut", "cre"))
 Description: Provides various methods of linear ordering of data. Supports weights and positive/negative impacts.
