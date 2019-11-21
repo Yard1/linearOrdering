@@ -13,10 +13,10 @@ and \code{rank} (returned from any linear ordering method from this library).}
 \value{
 A list including elements:
 \describe{
-  \item{\code{highest}}
-  \item{\code{above_average}}
-  \item{\code{below_average}}
-  \item{\code{lowest}}
+  \item{\code{highest}}{group of highest values}
+  \item{\code{above_average}}{group of above average values}
+  \item{\code{below_average}}{group of below average values}
+  \item{\code{lowest}}{group of lowest values}
 }
 }
 \description{
