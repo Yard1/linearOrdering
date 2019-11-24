@@ -19,8 +19,8 @@
 #' group_by_average(sum_of_ranks(d, w, i))
 #' @export
 group_by_average <- function(ordered_df) {
-  mean_score = mean(ordered_df$score)
-  sd_score = sd(ordered_df$score)
+  mean_score <- mean(ordered_df$score)
+  sd_score <- sd(ordered_df$score)
   groups <-
     list(
       "highest" = c(),
@@ -45,6 +45,56 @@ group_by_average <- function(ordered_df) {
     }
     else {
       groups$lowest <- c(groups$lowest, ordered_df$alt.row[i])
+    }
+  }
+  return (groups)
+}
+
+#' Group linearly ordered alternatives by quartiles.
+#'
+#' @param ordered_df A data frame with elements \code{alt.row}, \code{score}
+#'   and \code{rank} (returned from any linear ordering method from this library).
+#' @return A list including elements:
+#' \describe{
+#'   \item{\code{first_quartile}}{group of values in first quartile}
+#'   \item{\code{second_quartile}}{group of values in second quartile}
+#'   \item{\code{third_quartile}}{group of values in third quartile}
+#'   \item{\code{fourth_quartile}}{group of values in fourth quartile}
+#' }
+#' @author Antoni Baum \email{antoni.baum@protonmail.com}
+#' @examples
+#' d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
+#' w <- c(1, 1, 2)
+#' i <- c('+', '-', '+')
+#' group_by_quartile(sum_of_ranks(d, w, i))
+#' @export
+group_by_quartile <- function(ordered_df) {
+  quartiles <- quantile(ordered_df$score)
+  unname(quartiles)
+  groups <-
+    list(
+      "first_quartile" = c(),
+      "second_quartile" = c(),
+      "third_quartile" = c(),
+      "fourth_quartile" = c()
+    )
+  for (i in 1:nrow(ordered_df))
+  {
+    if (ordered_df$score[i] <= quartiles[2]) {
+      groups$first_quartile <-
+        c(groups$first_quartile, ordered_df$alt.row[i])
+    }
+    else if (ordered_df$score[i] <= quartiles[3]) {
+      groups$second_quartile <-
+        c(groups$second_quartile, ordered_df$alt.row[i])
+    }
+    else if (ordered_df$score[i] <= quartiles[4]) {
+      groups$third_quartile <-
+        c(groups$third_quartile, ordered_df$alt.row[i])
+    }
+    else {
+      groups$fourth_quartile <-
+        c(groups$fourth_quartile, ordered_df$alt.row[i])
     }
   }
   return (groups)
