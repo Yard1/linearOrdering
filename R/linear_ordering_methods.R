@@ -18,7 +18,7 @@
 #' to the return value.
 #' @author Antoni Baum \email{antoni.baum@protonmail.com}
 #' @examples
-#' d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
+#' d <- matrix(rpois(9, 5), nrow = 3, ncol = 3)
 #' w <- c(1, 1, 2)
 #' i <- c('+', '-', '+')
 #' sum_of_ranks(d, w, i)
@@ -48,7 +48,7 @@ sum_of_ranks <- function(decision, weights, impacts) {
 #' to the return value.
 #' @author Antoni Baum \email{antoni.baum@protonmail.com}
 #' @examples
-#' d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
+#' d <- matrix(rpois(9, 5), nrow = 3, ncol = 3)
 #' w <- c(1, 1, 2)
 #' i <- c('+', '-', '+')
 #' standardized_sums(d, w, i)
@@ -80,7 +80,7 @@ standardized_sums <- function(decision, weights, impacts) {
 #' @author Antoni Baum \email{antoni.baum@protonmail.com}
 #' @references \href{https://unesdoc.unesco.org/ark:/48223/pf0000158559.locale=en}{Hellwig, Z. (1968). On the optimal choice of predictors. UNESCO.}
 #' @examples
-#' d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
+#' d <- matrix(rpois(9, 5), nrow = 3, ncol = 3)
 #' w <- c(1, 1, 2)
 #' i <- c('+', '-', '+')
 #' hellwig(d, w, i)
@@ -117,7 +117,7 @@ hellwig <- function(decision, weights, impacts) {
 #' Multiple Attribute Decision Making: Methods and Applications.
 #' New York: Springer-Verlag. ISBN: 978-3-642-48318-9
 #' @examples
-#' d <- matrix(rpois(12, 5), nrow = 3, ncol = 3)
+#' d <- matrix(rpois(9, 5), nrow = 3, ncol = 3)
 #' w <- c(1, 1, 2)
 #' i <- c('+', '-', '+')
 #' topsis(d, w, i)
